@@ -1,4 +1,9 @@
-﻿using System.Net.NetworkInformation;
+﻿//Tool für die Protokollierung von Pings
+//Erstellt von: Jan-Hendrik Focke
+//https://github.com/Endergamer1
+
+
+using System.Net.NetworkInformation;
 using System.IO;
 using System.Text;
 using System.Runtime.InteropServices;

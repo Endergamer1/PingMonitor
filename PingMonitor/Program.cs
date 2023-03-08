@@ -42,7 +42,6 @@ static void HideConsoleWindow()
 
 string FileLocation = @"C:\Service\Ping\PingLog.txt";
 
-
 Ping p = new Ping();
 PingReply r;
 ShowConsoleWindow();
@@ -61,14 +60,14 @@ while (true)
         using (StreamWriter sw = File.AppendText(FileLocation))
         {
             Console.WriteLine("Boop");
-            sw.WriteLine("Fehler ab: " + DateTime.Now);
+            sw.WriteLine("Fehler ab: " + DateTime.Now + " Status: " + r.Status);
             while (true)
             {
                 r = p.Send(PingAddress);
                 if (r.Status == IPStatus.Success)
                 {
                     Console.WriteLine("Boop");
-                    sw.WriteLine("Erfolgreich ab: " + DateTime.Now);
+                    sw.WriteLine("Erfolgreich ab: " + DateTime.Now + " Status : " + r.Status);
                     break;
                 }
             }

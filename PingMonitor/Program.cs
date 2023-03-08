@@ -45,6 +45,7 @@ string FileLocation = @"C:\Service\Ping\PingLog.txt";
 
 Ping p = new Ping();
 PingReply r;
+ShowConsoleWindow();
 Console.WriteLine("Bitte Ping Addresse eingeben: ");
 string PingAddress = Console.ReadLine();
 StringBuilder sb = new StringBuilder("", 100);
